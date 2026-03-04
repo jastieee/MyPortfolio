@@ -1,0 +1,198 @@
+.about {
+  padding: 110px 6%;
+  background: var(--cream);
+}
+
+/* ── Section Header ── */
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.label::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--steel);
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  color: var(--navy);
+  margin-bottom: 60px;
+}
+
+/* ── Two-column grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ── Photo ── */
+.imgWrap {
+  position: relative;
+  max-width: 420px;
+}
+.imgFrame {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: 16px;
+  bottom: 16px;
+  border: 2px solid var(--sky);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Content ── */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--navy);
+  opacity: 0.82;
+}
+.content strong {
+  color: var(--navy);
+  opacity: 1;
+  font-weight: 600;
+}
+
+.age {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--steel);
+}
+
+/* ── Skill tags ── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+.tag {
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(156, 213, 255, 0.2);
+  color: var(--navy);
+  border: 1px solid rgba(122, 170, 206, 0.35);
+  letter-spacing: 0.02em;
+}
+
+/* ── Button ── */
+.btn {
+  align-self: flex-start;
+  padding: 14px 30px;
+  background: var(--navy);
+  color: var(--cream);
+  border: 2px solid var(--navy);
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all var(--transition);
+  margin-top: 8px;
+}
+.btn:hover {
+  background: var(--steel);
+  border-color: var(--steel);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(53, 88, 114, 0.2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .imgWrap {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+/* ── Add these to the bottom of About.module.css ── */
+
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillTitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: rgba(156, 213, 255, 0.2);
+  color: var(--navy);
+  border: 1px solid rgba(122, 170, 206, 0.35);
+}
+
+.toggleBtn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--steel);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color var(--transition);
+  margin-top: 4px;
+}
+.toggleBtn:hover {
+  color: var(--navy);
+}
